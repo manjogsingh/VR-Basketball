@@ -24,6 +24,7 @@ public class ControllerManager : MonoBehaviour
     void Start()
     {
         trackedObject = GetComponent<SteamVR_TrackedObject>();
+        laser = GetComponentInChildren<LineRenderer>();
     }
 
     // Update is called once per frame
