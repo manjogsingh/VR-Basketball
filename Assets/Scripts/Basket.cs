@@ -19,7 +19,21 @@ public class Basket : MonoBehaviour {
 		{
 			score++;
 			scoreBoard.text=score.ToString();
-			other.gameObject.GetComponent<BallBehaviour>().BallReset();
+			//other.gameObject.GetComponent<BallBehaviour>().BallReset();
+		}
+	}
+
+	/// <summary>
+	/// OnTriggerEnter is called when the Collider other enters the trigger.
+	/// </summary>
+	/// <param name="other">The other Collider involved in this collision.</param>
+	void OnTriggerEnter(Collider other)
+	{
+		if(other.gameObject.CompareTag("Ball"))
+		{
+			score++;
+			scoreBoard.text=score.ToString();
+			//other.gameObject.GetComponent<BallBehaviour>().BallReset();
 		}
 	}
 

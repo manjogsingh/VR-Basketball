@@ -11,7 +11,7 @@ public class ControllerManager : MonoBehaviour
     #endregion
 
     #region Teleportation variables	
-		private LineRenderer laser;
+		public LineRenderer laser;
 		public GameObject teleportAimer;
 		public Vector3 teleportLocation;
 		public GameObject player;
@@ -24,7 +24,7 @@ public class ControllerManager : MonoBehaviour
     void Start()
     {
         trackedObject = GetComponent<SteamVR_TrackedObject>();
-        laser = GetComponentInChildren<LineRenderer>();
+        //laser = GetComponentInChildren<LineRenderer>();
     }
 
     // Update is called once per frame
