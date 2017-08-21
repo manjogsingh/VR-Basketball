@@ -12,6 +12,7 @@
 
 # Blender
 *.blend1
+*.blend1.meta
 
 # Visual Studio 2015 cache directory
 /.vs/
