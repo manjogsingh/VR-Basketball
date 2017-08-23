@@ -9,6 +9,13 @@ public class Basket : MonoBehaviour {
 
 	public Text scoreBoard;
 	/// <summary>
+	/// Awake is called when the script instance is being loaded.
+	/// </summary>
+	void Awake()
+	{
+		scoreBoard.text=score.ToString();
+	}
+	/// <summary>
 	/// OnCollisionEnter is called when this collider/rigidbody has begun
 	/// touching another rigidbody/collider.
 	/// </summary>
