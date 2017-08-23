@@ -7,10 +7,7 @@ public class BallBehaviour : MonoBehaviour {
 	private Rigidbody rb;
 
 	public Transform ballPortal;
-	/// <summary>
-	/// Start is called on the frame when a script is enabled just before
-	/// any of the Update methods is called the first time.
-	/// </summary>
+	public GameObject endCanvas;
 	void Start()
 	{
 		rb=GetComponent<Rigidbody>();
@@ -22,11 +19,6 @@ public class BallBehaviour : MonoBehaviour {
 		rb.velocity=Vector3.zero;
 	}
 
-	/// <summary>
-	/// OnCollisionEnter is called when this collider/rigidbody has begun
-	/// touching another rigidbody/collider.
-	/// </summary>
-	/// <param name="other">The Collision data associated with this collision.</param>
 	void OnCollisionEnter(Collision other)
 	{
 		if(other.gameObject.CompareTag("Null Space"))
@@ -35,12 +27,16 @@ public class BallBehaviour : MonoBehaviour {
 		}
 	}
 
-	/// <summary>
-	/// OnTriggerExit is called when the Collider other enters the trigger.
-	/// </summary>
-	/// <param name="other">The other Collider involved in this collision.</param>
-	void OnTriggerExit(Collider other)
+	void OnTriggerEnter(Collider other)
 	{
-		Debug.Log(other.gameObject.name);
+		if(other.gameObject.name.Equals("Restart"))
+		{
+			endCanvas.SetActive(false);
+			Timer.timeLeft=90f;
+		}
+		else if(other.gameObject.name.Equals("Exit"))
+		{
+			//exit
+		}
 	}
 }
