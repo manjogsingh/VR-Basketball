@@ -5,15 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class BallBehaviour : MonoBehaviour
 {
-
     private Rigidbody rb;
-
     public Transform ballPortal;
     public GameObject endCanvas;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
     }
+
     public void BallReset()
     {
         transform.position = ballPortal.position;
@@ -56,18 +56,26 @@ public class BallBehaviour : MonoBehaviour
         else if (other.gameObject.name.Equals("Exit"))
         {
             SteamVR_LoadLevel.Begin("Intro");
+            ScoreHandler.scoreBlue = 0;
+            ScoreHandler.scoreRed = 0;
         }
         else if (other.gameObject.name.Equals("Practice-Half"))
         {
             SteamVR_LoadLevel.Begin("Practice-Half");
+            ScoreHandler.scoreBlue = 0;
+            ScoreHandler.scoreRed = 0;
         }
         else if (other.gameObject.name.Equals("Practice-Full"))
         {
             SteamVR_LoadLevel.Begin("Practice-Full");
+            ScoreHandler.scoreBlue = 0;
+            ScoreHandler.scoreRed = 0;
         }
         else if (other.gameObject.name.Equals("RapidFire"))
         {
             SteamVR_LoadLevel.Begin("RapidFire");
+            ScoreHandler.scoreBlue = 0;
+            ScoreHandler.scoreRed = 0;
         }
     }
 }

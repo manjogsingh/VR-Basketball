@@ -5,33 +5,33 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
-    public static float timeLeft=90f;
+    public static float timeLeft = 90f;
     public Text timer;
     public GameObject endGameCanvas;
-	public Text endScore;
+    public Text endScore;
     public AudioSource endClip;
     void Start()
     {
         timer.text = timeLeft.ToString();
     }
-    // Update is called once per frame
+
     void Update()
     {
+        if (timeLeft == 20)
+        {
+            endClip.Play();
+        }
         if (timeLeft > 0)
         {
             timeLeft -= Time.deltaTime;
             timeLeft = Mathf.Round(timeLeft * 100f) / 100f;
             timer.text = timeLeft.ToString().Replace('.', ':');
         }
-        else if(timeLeft==10)
+        else if (timeLeft <= 0)
         {
-            endClip.Play();
-        }
-        else if (timeLeft < 0)
-        {
-			timer.text="00:00";
+            timer.text = "00:00";
             endGameCanvas.SetActive(true);
-            endScore.text = Basket.score.ToString();
+            endScore.text = ScoreHandler.scoreBlue.ToString();
         }
     }
 }

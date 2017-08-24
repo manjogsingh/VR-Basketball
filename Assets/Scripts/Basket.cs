@@ -5,13 +5,12 @@ using UnityEngine.UI;
 
 public class Basket : MonoBehaviour
 {
-
-    public static int score = 0;
     public Text scoreBoard;
-
-    void Awake()
+    public bool isRed;
+    
+    void Start()
     {
-        scoreBoard.text = score.ToString();
+        scoreBoard.text = "0";
     }
 
     void OnTriggerEnter(Collider other)
@@ -20,15 +19,17 @@ public class Basket : MonoBehaviour
         {
             if (Timer.timeLeft > 0)
             {
-                score++;
-                scoreBoard.text = score.ToString();
+                if(isRed)
+                {
+                    ScoreHandler.scoreRed++;
+                    scoreBoard.text = ScoreHandler.scoreRed.ToString();
+                }
+                else
+                {
+                    ScoreHandler.scoreBlue++;
+                    scoreBoard.text = ScoreHandler.scoreBlue.ToString();
+                }                
             }
-            //other.gameObject.GetComponent<BallBehaviour>().BallReset();
         }
-    }
-
-    void OnCollisionExit(Collision other)
-    {
-        //ball reset
     }
 }
