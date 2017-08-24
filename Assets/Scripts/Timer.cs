@@ -9,6 +9,7 @@ public class Timer : MonoBehaviour
     public Text timer;
     public GameObject endGameCanvas;
 	public Text endScore;
+    public AudioSource endClip;
     void Start()
     {
         timer.text = timeLeft.ToString();
@@ -21,6 +22,10 @@ public class Timer : MonoBehaviour
             timeLeft -= Time.deltaTime;
             timeLeft = Mathf.Round(timeLeft * 100f) / 100f;
             timer.text = timeLeft.ToString().Replace('.', ':');
+        }
+        else if(timeLeft==10)
+        {
+            endClip.Play();
         }
         else if (timeLeft < 0)
         {

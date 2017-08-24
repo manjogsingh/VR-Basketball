@@ -27,6 +27,23 @@ public class BallBehaviour : MonoBehaviour
         {
             BallReset();
         }
+
+        if (other.gameObject.name.Equals("Board"))
+        {
+            other.gameObject.GetComponent<AudioSource>().Play();
+        }
+        else if (other.gameObject.name.Equals("Net"))
+        {
+            other.gameObject.GetComponent<AudioSource>().Play();
+        }
+        else if (other.gameObject.name.Equals("Rim"))
+        {
+            other.gameObject.GetComponent<AudioSource>().Play();
+        }
+        else
+        {
+            gameObject.GetComponent<AudioSource>().Play();
+        }
     }
 
     void OnTriggerEnter(Collider other)
