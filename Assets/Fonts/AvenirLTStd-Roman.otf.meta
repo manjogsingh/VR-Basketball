@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 1df68445ed83e844f9050038d774e225
-timeCreated: 1503061001
+guid: ed6ea8525ed8e174aa79a8482c7823d1
+timeCreated: 1503769682
 licenseType: Free
 TrueTypeFontImporter:
   serializedVersion: 4
@@ -9,9 +9,9 @@ TrueTypeFontImporter:
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
-  fontName: DS-Digital
+  fontName: Avenir LT Std
   fontNames:
-  - DS-Digital
+  - Avenir LT Std
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
