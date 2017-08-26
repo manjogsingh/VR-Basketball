@@ -20,14 +20,12 @@ public class ControllerManager : MonoBehaviour
 		public bool isLeftHanded;
 		public float throwForce = 1.5f;
 	#endregion
-    // Use this for initialization
+
     void Start()
     {
         trackedObject = GetComponent<SteamVR_TrackedObject>();
-        //laser = GetComponentInChildren<LineRenderer>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         device = SteamVR_Controller.Input((int)trackedObject.index);
@@ -57,16 +55,10 @@ public class ControllerManager : MonoBehaviour
         }
         else
         {
-            
 
         }
     }
 
-    /// <summary>
-    /// OnTriggerStay is called once per frame for every Collider other
-    /// that is touching the trigger.
-    /// </summary>
-    /// <param name="other">The other Collider involved in this collision.</param>
     void OnTriggerStay(Collider other)
     {
         if (other.gameObject.CompareTag("Ball"))

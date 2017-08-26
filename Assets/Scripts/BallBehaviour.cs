@@ -5,8 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class BallBehaviour : MonoBehaviour
 {
+
     private Rigidbody rb;
     public Transform ballPortal;
+    public GameObject doors;
     public GameObject endCanvas;
 
     void Start()
@@ -55,6 +57,8 @@ public class BallBehaviour : MonoBehaviour
         }
         else if (other.gameObject.name.Equals("Exit"))
         {
+            doors.GetComponent<Animator>().Play("OpenDoor");
+            new WaitForSeconds(5.0f);
             SteamVR_LoadLevel.Begin("Intro");
             ScoreHandler.scoreBlue = 0;
             ScoreHandler.scoreRed = 0;
@@ -73,6 +77,8 @@ public class BallBehaviour : MonoBehaviour
         }
         else if (other.gameObject.name.Equals("RapidFire"))
         {
+            doors.GetComponent<Animator>().Play("OpenDoor");
+            new WaitForSeconds(5.0f);
             SteamVR_LoadLevel.Begin("RapidFire");
             ScoreHandler.scoreBlue = 0;
             ScoreHandler.scoreRed = 0;
