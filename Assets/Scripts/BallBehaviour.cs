@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Video;
 
 public class BallBehaviour : MonoBehaviour
 {
@@ -82,6 +83,14 @@ public class BallBehaviour : MonoBehaviour
             SteamVR_LoadLevel.Begin("RapidFire");
             ScoreHandler.scoreBlue = 0;
             ScoreHandler.scoreRed = 0;
+        }
+        else if (other.gameObject.name.Equals("Grab"))
+        {
+            other.GetComponent<VideoPlayer>().Play();
+        }
+        else if (other.gameObject.name.Equals("Locomotion"))
+        {
+            other.GetComponent<VideoPlayer>().Play();
         }
     }
 }
