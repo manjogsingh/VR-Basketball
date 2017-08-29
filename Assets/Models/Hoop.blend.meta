@@ -289,6 +289,11 @@ ModelImporter:
     100562: Group_72
     100564: Group_94
     100566: //RootNode
+    100568: Board
+    100570: Body
+    100572: Net
+    100574: Rim
+    100576: ScoreBoard
     400000: Agrupar_3
     400002: Agrupar_3_001
     400004: Agrupar_4
@@ -573,6 +578,11 @@ ModelImporter:
     400562: Group_72
     400564: Group_94
     400566: //RootNode
+    400568: Board
+    400570: Body
+    400572: Net
+    400574: Rim
+    400576: ScoreBoard
     2300000: Agrupar_3
     2300002: Agrupar_3_001
     2300004: Agrupar_4
@@ -856,6 +866,11 @@ ModelImporter:
     2300560: Group_70_001
     2300562: Group_72
     2300564: Group_94
+    2300566: Board
+    2300568: Body
+    2300570: Net
+    2300572: Rim
+    2300574: ScoreBoard
     3300000: Agrupar_3
     3300002: Agrupar_3_001
     3300004: Agrupar_4
@@ -1139,6 +1154,11 @@ ModelImporter:
     3300560: Group_70_001
     3300562: Group_72
     3300564: Group_94
+    3300566: Board
+    3300568: Body
+    3300570: Net
+    3300572: Rim
+    3300574: ScoreBoard
     4300000: G-__557022
     4300002: G-__557013
     4300004: G-__557004
@@ -1422,6 +1442,11 @@ ModelImporter:
     4300560: G-__555591
     4300562: G-__555582
     4300564: G-__555573
+    4300566: Body
+    4300568: Rim
+    4300570: Net
+    4300572: Board
+    4300574: ScoreBoard
     6400000: Agrupar_3_001
     6400002: G-__556266
     6400004: G-__556464
@@ -1471,6 +1496,11 @@ ModelImporter:
     6400092: Group_227
     6400094: Group_227_001
     6400096: Group_237
+    6400098: Board
+    6400100: Body
+    6400102: Net
+    6400104: Rim
+    6400106: ScoreBoard
     7400000: Default Take
     9500000: //RootNode
   materials:
