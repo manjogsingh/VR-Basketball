@@ -10,6 +10,9 @@
 /Assets/SteamVR
 /Assets/SteamVR.meta
 
+# Draw Call Minimizer
+/Assets/Draw Call Minimizer
+
 # Blender
 *.blend1
 *.blend1.meta
