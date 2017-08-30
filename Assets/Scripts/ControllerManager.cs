@@ -31,7 +31,7 @@ public class ControllerManager : MonoBehaviour
         device = SteamVR_Controller.Input((int)trackedObject.index);
         if (isLeftHanded)
         {
-            if (device.GetTouchDown(SteamVR_Controller.ButtonMask.Touchpad))
+            if (device.GetTouch(SteamVR_Controller.ButtonMask.Touchpad))
             {
                 laser.gameObject.SetActive(true);
                 teleportAimer.SetActive(true);
