@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -58,8 +59,15 @@ public class BallBehaviour : MonoBehaviour
         }
         else if (other.gameObject.name.Equals("Exit"))
         {
-            doors.GetComponent<Animator>().Play("OpenDoor");
-            new WaitForSeconds(5.0f);
+            try
+            {
+                doors.GetComponent<Animator>().Play("OpenDoor");
+                new WaitForSeconds(5.0f);
+            }
+            catch (Exception e)
+            {
+                Debug.Log(e + "No Door");
+            }
             SteamVR_LoadLevel.Begin("Intro");
             ScoreHandler.scoreBlue = 0;
             ScoreHandler.scoreRed = 0;
