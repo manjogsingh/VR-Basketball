@@ -6,6 +6,10 @@ Basketball Game for HTC Vive
 * Both hand triggers can grab and throw object
 * Realistic lighting for realism
 
+<img src="/Assets/Textures/half.png">
+
+<img src="/Assets/Textures/full.png">
+
 ## Steps to run project
 1. Update to Unity version 5.6 for video support
 2. Import SteamVR SDK
